@@ -1,3 +1,19 @@
+## Testing react-bulma-components with Next.js
+
+This is a standard Next.js app created with create-next-app.
+
+On top of that it has `react-bulma-components` and then I've added in several of the Next dependencies to support SASS compilation.
+
+## Where I have made changes
+
+`.babelrc` – the advice from Next was to set up a Babel alias for `_variables.sass` but this does not help when it is included from within node_modules.
+
+`postcss.config.js` - this is to see if using Postcss might help generate SASS to CSS, but it seems an unrelated issue.
+
+`next.config.js` - this adds CSS / SASS compilation settings for webpack, although it appears not to help. Webpack cannot take an alias in this file based on what the Next team say.
+
+## Default readme:
+
 This project was bootstrapped with [Create Next App](https://github.com/segmentio/create-next-app).
 
 Find the most recent version of this guide at [here](https://github.com/segmentio/create-next-app/blob/master/lib/templates/default/README.md). And check out [Next.js repo](https://github.com/zeit/next.js) for the most up-to-date info.
